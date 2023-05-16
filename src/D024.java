@@ -1,5 +1,5 @@
 import java.util.*;
-public class App {
+public class D024 {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
         Scanner sc = new Scanner(System.in);
