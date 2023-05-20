@@ -26,8 +26,13 @@ public class D093 {
       // System.out.println("nums[" + i + "]" + nums[i]);  // 確認用出力
     }
 
+    // numが出力されるか検証用。0になったのをみるあたり、計算してnumsにしたからnumの値が上書きされていってなくなったのかも？
+    // System.out.println(num);
+
+    // なぜか合致するときに0が出力されてしまう。(numの値が定義されていないことになってる？)
     if (nums[0] == nums[1] && nums[0] == nums[2] && nums[0] == nums[3]) {
-      System.out.println(num);
+      // System.out.println("nums[0]" + "nums[1]" + "nums[2]" + "nums[3]");
+      System.out.println("" + nums[0] + nums[1] + nums[2] + nums[3]);
     } else {
       System.out.println("No");
     }
