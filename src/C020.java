@@ -175,20 +175,17 @@
 //   }
 // }
 
+// BigDecimalの学習
 // import java.util.*;
+// import java.math.BigDecimal;
 
 // public class C020 {
 //   public static void main(String[] args) {
-//     // int m = 1;
-//     // int p = 80;
-//     // int q = 40;
-
-//     // double pPer = (double) p / 100;
-//     // System.out.println(pPer);
-//     System.out.println(1.5 + 0.8);
-//     System.out.println(1.5 - 0.8);
-//     System.out.println(1.5 * 0.8);
-//     System.out.println(1.5 / 0.8);
+//     double b1 = 2.7;
+//     double b2 = 1.1;
+//     BigDecimal result = new BigDecimal(Double.toString(b1)).divide(new BigDecimal(Double.toString(b2)), BigDecimal.ROUND_HALF_UP);
+//     double b3 = result.doubleValue();
+//     System.out.println(b3);
 //   }
 // }
 
