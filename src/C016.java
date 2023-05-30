@@ -21,7 +21,16 @@ public class C016 {
     hmap.put("Z", "2");
 
     // System.out.println(hmap.get("A"));  // とりあえず連想配列の作成と出力は期待通りできている。
+    for (int i = 0; i < letters.length; i++) {
+      if (hmap.containsKey(letters[i])) {
+        letters[i] = hmap.get(letters[i]);
+        // System.out.println()
+      }
+    }
 
+    String reLetters = String.join("", letters);
+    System.out.println(reLetters);
+    
 
   }
 }
