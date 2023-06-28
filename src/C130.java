@@ -26,13 +26,41 @@ public class C130 {
       }
     }
 
-    // 以下、resultsの確認用
+    // // 以下、resultsの確認用
+    // for (int i = 0; i < input_times; i++) {
+    //   for (int j = 0; j < 2; j++) {
+    //     System.out.print(results[i][j] + " ");
+    //   }
+    //   System.out.println();
+    // }
+
+    // resultsの中に"n"があったときのループのカウンター変数をListとして保持する(可変長である必要があるため)
+    ArrayList<Integer> check_n = new ArrayList<Integer>();
+    
+    // resultsをループさせ、resultsの要素に"n"があるか判断する
     for (int i = 0; i < input_times; i++) {
+      boolean has_n = false;  // nが含まれていればtrueにする。まずはfalseで初期化
       for (int j = 0; j < 2; j++) {
-        System.out.print(results[i][j] + " ");
+        if (results[i][j].equals("n")) {
+          has_n = true;
+          break;  // このif文を抜ける
+        }
       }
-      System.out.println();
+      if (has_n) {  // 先のループでhas_nがtrueであれば
+        check_n.add(i);  // リストcheck_nにループのカウンター変数iを保持させる。
+      }
     }
+
+    // 解き直す問題数とその番号の表示
+    System.out.println("解き直す問題数： " + check_n.size());
+    for (int i = 0; i < check_n.size(); i++) {
+      if (check_n.size() != 0) {
+        // System.out.println("問題No. " + check_n.get(i+1));
+        int count = check_n.get(i);  // そのままcheck_nを出力すると期待値-1される(0スタート)のでcountという変数に格納する。
+        System.out.println("問題No. " + (count+1));
+      }
+    }
+
 
   }
 }
